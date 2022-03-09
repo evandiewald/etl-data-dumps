@@ -77,7 +77,7 @@ def garbage_collection(files_to_delete: list):
 @dag(
     dag_id="etl_inventory_dumps",
     start_date=datetime.datetime(2022, 2, 10),
-    schedule_interval="@once",
+    schedule_interval="0 7 * * *",
     catchup=False)
 def etl_inventory_dumps():
     """
